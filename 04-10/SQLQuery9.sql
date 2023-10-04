@@ -1,0 +1,12 @@
+-- 01. QUAL CLIENTE GASTOU MAIS NA MINHA LOJA ?
+
+SELECT 
+	TOP 1
+	NomeDoCliente = C.Nome,
+	ValorDoPedido = P.valor
+
+FROM PEDIDO P
+	 INNER JOIN
+	 CLIENTE C ON P.IDCLIENTE = C.IDCLIENTE 
+
+ORDER by P.valor desc
